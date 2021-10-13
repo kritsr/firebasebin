@@ -2,7 +2,7 @@ import {
     getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut,
     setPersistence, browserLocalPersistence, onAuthStateChanged
 } from 'https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js'
-import {ref} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.js'
+import {ref} from '/vue.js'
 
 const auth = getAuth();
 

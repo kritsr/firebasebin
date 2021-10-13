@@ -1,6 +1,6 @@
-import {createApp} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.js'
+import {createApp} from '/vue.js'
 // import {createApp} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.prod.js'
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, userRef} from './firebase/auth.js'
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, userRef} from '/firebase/auth.js'
 
 const app = createApp({
     data() {
