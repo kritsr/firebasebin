@@ -1,9 +1,8 @@
-import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.js'
-// import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.esm.browser.min.js'
+import {createApp} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.js'
+// import {createApp} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.prod.js'
 
-var app = new Vue({ 
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
+const app = createApp({
+    data() {
+        return {message: 'Hello Vue!!'}
     }
-});
+}).mount('#app');
