@@ -8,8 +8,9 @@ const auth = getAuth();
 
 // Make user reactive
 export let userRef = ref();
-function setUser(user) {
-    return userRef.value = user
+export let user;
+function setUser(_user) {
+    return userRef.value = user = _user
 }
 
 await setPersistence(auth, browserLocalPersistence); // Persist login data in local storage

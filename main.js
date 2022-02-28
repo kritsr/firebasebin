@@ -1,6 +1,8 @@
 import {createApp} from '/vue.js'
 // import {createApp} from 'https://cdn.jsdelivr.net/npm/vue@3.2.20/dist/vue.esm-browser.prod.js'
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, userRef} from '/firebase/auth.js'
+import { writeUserData } from './firebase/database.js';
+import TextEditor from './components/TextEditor.js';
 
 const app = createApp({
     data() {
@@ -15,8 +17,11 @@ const app = createApp({
         signUp,
         signIn
     }
-}).mount('#app');
+});
 
+
+app.component('text-editor', TextEditor)
+app.mount('#app');
 function onError(e) {
     console.error(e.code);
     console.error(e.message);
@@ -37,3 +42,6 @@ async function signIn() {
         onError(e)
     }
 }
+
+window.userRef = userRef
+window.writeUserData = writeUserData
